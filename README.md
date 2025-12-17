@@ -2,12 +2,29 @@
 
 This is the example code repository for the Alchemy Hello World tutorial series (parts 1, 2, 3).
 
-[YouTube Playlist](https://www.youtube.com/watch?v=g73EGNKatDw&list=PLMj8NvODurfGgDJG-qQWyKtqTxJyRGI0i)
-
+curl --request POST \
+     --url https://eth-mainnet.g.alchemy.com/v2/lSem2bdXGaejluyxuqaYvI0Sltzb3gNZ \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "eth_getBlockByNumber",
+  "params": [
+	  "finalized",
+	  false
+  ]
+}
+'node demo-script.js
+demo-script.js
 - [Part 1 Docs](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract)
 - [Part 2 Docs](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract)
 - [Part 3 Docs](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan)
-
+mkdir alchemy-demo
+cd alchemy-demo
+npm init --yes
+touch demo-script.js
 ## Setup
 
 You can clone this repo and get going right away.
