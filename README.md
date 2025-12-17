@@ -1,4 +1,4 @@
-# hello-world-tutorial
+https://eth-mainnet.g.alchemy.com/v2/lSem2bdXGaejluyxuqaYvI0Sltzb3gNZ# hello-world-tutorial
 
 This is the example code repository for the Alchemy Hello World tutorial series (parts 1, 2, 3).
 
@@ -13,7 +13,25 @@ This is the example code repository for the Alchemy Hello World tutorial series 
 You can clone this repo and get going right away.
 
 Just make sure to:
-- run `npm install` to set up all the dependencies (hardhat, ethers, etc.)
+- run `npm install` to set up all the dependencies (hardhat, ethers, etc.)curl --request POST \
+     --url https://eth-mainnet.g.alchemy.com/v2/lSem2bdXGaejluyxuqaYvI0Sltzb3gNZ \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "eth_getBlockByNumber",
+  "params": [
+	  "finalized",
+	  false
+  ]
+}node demo-script.js
+mkdir alchemy-demo
+cd alchemy-demo
+npm init --yes
+touch demo-script.js
+'
 - rename `.env-example` to `.env` and then fill in the environment variables with your own info
 - set up an Alchemy account [here](https://alchemy.com/?a=641a319005)
 - set up a [Metamask](https://metamask.io/download.html) wallet with [fake testnet ether](https://faucet.dimensions.network/)
