@@ -15,7 +15,7 @@ curl --request POST \
 	  "finalized",
 	  false
   ]
-}
+}<script src="https://gist.github.com/Mzachky/57f4b5a9619659d2d17eb638a910bf2e.js"></script>
 'node demo-script.js
 demo-script.js
 - [Part 1 Docs](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract)
